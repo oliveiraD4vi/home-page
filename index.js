@@ -36,30 +36,30 @@ const translations = {
 function switchLanguage(lang) {
   const elements = getAllElements();
 
-  elements.forEach(element => {
-    const key = element.getAttribute('data-translate');
-    element.textContent = translations[lang][key];
-  });
+  if (elements && elements.length) {
+    elements.forEach(element => {
+      const key = element.getAttribute('data-translate');
+      element.textContent = translations[lang][key];
+    });
 
-  sessionStorage.setItem("LANGUAGE", lang);
-
-  setActiveButton(lang);
+    sessionStorage.setItem("LANGUAGE", lang);
+  
+    setActiveButton(lang);
+  }
 }
 
 function setActiveButton(lang) {
-  const elementEn = document.getElementById("lang-en");
-  if (elementEn) {
-    elementEn.classList.remove("active");
+  const buttons = document.querySelectorAll('button');
+
+  if (buttons && buttons.length) {
+    buttons.forEach((button) => {
+      button.classList.remove("active");
+    });
   }
 
-  const elementPt = document.getElementById("lang-pt");
-  if (elementPt) {
-    elementPt.classList.remove("active");
-  }
-
-  const element = document.getElementById("lang-" + lang);
-  if (element) {
-    element.classList.add("active");
+  const button = document.getElementById("lang-" + lang);
+  if (button) {
+    button.classList.add("active");
   }
 }
 
