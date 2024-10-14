@@ -55,6 +55,7 @@ main {
 main > .page-container {
   position: relative;
   z-index: 997;
+  width: 100%;
   max-width: 968px;
   padding: 2rem;
   display: flex;
@@ -66,18 +67,30 @@ main > .page-container > .page-navigation {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+main > .page-container > .page-navigation > .title {
+  display: flex;
+  align-items: center;
   gap: .75rem;
 }
 
-main > .page-container > .page-navigation > a {
-  padding: .5rem;
+main > .page-container > .page-navigation > .title > a {
+  padding: .4rem;
   box-shadow: 2px -2px 0 1px #fafafa inset;
   border: solid transparent;
   border-width: 0 0 2px 2px;
   transform: rotate(45deg);
 }
 
-main > .page-container > .page-navigation > h1::first-letter {
+@media (max-width: 968px) {
+  main > .page-container > .page-navigation h1 {
+    font-size: .75rem;
+  }
+}
+
+main > .page-container > .page-navigation h1::first-letter {
   font-weight: bold;
   color: #e75d28;
 }
@@ -225,11 +238,6 @@ body {
 /* FLOATING ACTIONS */
 
 .floating-actions {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1rem;
-  z-index: 999;
   display: flex;
   align-items: center;
   gap: .5rem;
