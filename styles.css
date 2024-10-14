@@ -1,0 +1,204 @@
+/* BASIC CONFIGURATION */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
+abbr, acronym, address, big, cite, code, del,
+dfn, em, img, ins, kbd, q, s, samp, small,
+strike, strong, sub, sup, tt, b, u, center, dl,
+dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav,
+output, ruby, section, summary, time, mark, audio, video {
+  font-family: "Montserrat", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background-color: #222;
+  color: white;
+}
+
+/* LAYOUT */
+
+main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+main > .page-container {
+  position: relative;
+  z-index: 997;
+  max-width: 968px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+main > .page-container > .page-navigation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+main > .page-container > .page-navigation > a {
+  padding: .5rem;
+  box-shadow: 2px -2px 0 1px #fafafa inset;
+  border: solid transparent;
+  border-width: 0 0 2px 2px;
+  transform: rotate(45deg);
+}
+
+main > .page-container > .page-navigation > h1::first-letter {
+  font-weight: bold;
+  color: #e75d28;
+}
+
+footer {
+  margin-top: 1rem;
+  padding: 1rem 0;
+  width: 100%;
+  border-top: 1px solid #c2c2c2;
+  text-align: center;
+}
+
+footer > .icon {
+  color: #e75d28;
+}
+
+footer > a {
+  color: #fafafa;
+}
+
+/* EFFECTS */
+
+.reflect {
+  position: relative;
+  overflow: hidden;
+}
+
+.reflect::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -170px;
+  height: 100%;
+  width: 170px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: loading 3s infinite;
+}
+
+@keyframes loading {
+  0% {
+    left: -170px;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.vibrate {
+  animation: vibrate 3s infinite;
+}
+
+@keyframes vibrate {
+  0%, 50% { transform: translateX(0); }
+  53% { transform: translateX(-2px); }
+  56% { transform: translateX(2px); }
+  59% { transform: translateX(-2px); }
+  62% { transform: translateX(2px); }
+  65% { transform: translateX(0); }
+}
+
+/* BACKGROUND ANIMATION */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: table;
+  width: 100%;
+  height: 100%;
+  line-height: 1.5;
+  position: relative;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  margin: auto;
+  width: 90vw;
+}
+
+.line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+}
+
+.line::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+  animation: drop 7s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line:nth-child(1) {
+  margin-left: -25%;
+}
+
+.line:nth-child(1)::after {
+  animation-delay: 2s;
+}
+
+.line:nth-child(3) {
+  margin-left: 25%;
+}
+
+.line:nth-child(3)::after {
+  animation-delay: 2.5s;
+}
+
+@keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
