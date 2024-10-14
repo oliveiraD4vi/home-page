@@ -63,10 +63,9 @@ main > .page-container {
   gap: 1rem;
 }
 
-
 @media (max-width: 968px) {
   main > .page-container {
-    padding: 1.25rem;
+    padding: 1.5rem;
   }
 }
 
