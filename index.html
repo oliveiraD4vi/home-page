@@ -16,17 +16,13 @@
     main > .page-container > .content {
       display: flex;
       justify-content: space-between;
-      align-items: center;
       gap: 1rem;
     }
 
     @media (max-width: 968px) {
       main > .page-container > .content {
         flex-direction: column;
-      }
-
-      main > .page-container > .content > .box-container {
-        width: 100%;
+        align-items: center;
       }
     }
 
@@ -80,8 +76,8 @@
     }
 
     main > .page-container > .content > .box-container > .box.b {
-      background: rgb(231, 94, 40, 0.65);
-      border: 2px solid rgb(231, 94, 40, 0.25);
+      background: rgba(216, 216, 216, 0.5);
+      border: 1px solid rgba(216, 216, 216, 0.25);
     }
 
     main > .page-container > .content > .box-container > .box.c {
@@ -90,8 +86,8 @@
     }
 
     main > .page-container > .content > .box-container > .box.d {
-      background: rgba(216, 216, 216, 0.5);
-      border: 1px solid rgba(216, 216, 216, 0.25);
+      background: rgb(231, 94, 40, 0.65);
+      border: 2px solid rgb(231, 94, 40, 0.25);
     }
   </style>
 </head>
@@ -109,8 +105,8 @@
 
         <div class="floating-actions">
           <div class="language-switch">
-            <button onclick="switchLanguage('pt')">PT</button>
-            <button onclick="switchLanguage('en')">EN</button>
+            <button id="lang-pt" class="active" onclick="switchLanguage('pt')">PT</button>
+            <button id="lang-en" onclick="switchLanguage('en')">EN</button>
           </div>
         </div>
       </div>
@@ -128,14 +124,14 @@
           <a data-translate="box-c" href="./src/pages/projects/projects.html" class="box c vibrate reflect">
             Projetos
           </a>
-          <a data-translate="box-a" href="./src/pages/academic/academic.html" class="box a">
-            Acadêmico
-          </a>
           <a data-translate="box-b" href="./src/pages/about/about.html" class="box b">
             Sobre mim
           </a>
           <a data-translate="box-d" href="./src/pages/experience/experience.html" class="box d">
             Experiência
+          </a>
+          <a data-translate="box-a" href="./src/pages/academic/academic.html" class="box a">
+            Acadêmico
           </a>
         </div>
       </div>

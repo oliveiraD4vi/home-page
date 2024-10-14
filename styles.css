@@ -253,6 +253,7 @@ body {
   padding: .5rem;
 }
 
+.floating-actions > .language-switch > button.active,
 .floating-actions > .language-switch > button:hover {
   background-color: #d3d3d3;
 }

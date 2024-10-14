@@ -42,6 +42,25 @@ function switchLanguage(lang) {
   });
 
   sessionStorage.setItem("LANGUAGE", lang);
+
+  setActiveButton(lang);
+}
+
+function setActiveButton(lang) {
+  const elementEn = document.getElementById("lang-en");
+  if (elementEn) {
+    elementEn.classList.remove("active");
+  }
+
+  const elementPt = document.getElementById("lang-pt");
+  if (elementPt) {
+    elementPt.classList.remove("active");
+  }
+
+  const element = document.getElementById("lang-" + lang);
+  if (element) {
+    element.classList.add("active");
+  }
 }
 
 function getAllElements() {
@@ -53,7 +72,10 @@ function getFirstLoadLanguage() {
 
   if (lang) {
     switchLanguage(lang);
+    return;
   }
+
+  switchLanguage("pt");
 }
 
 getFirstLoadLanguage();
