@@ -63,6 +63,13 @@ main > .page-container {
   gap: 1rem;
 }
 
+
+@media (max-width: 968px) {
+  main > .page-container {
+    padding: 1.25rem;
+  }
+}
+
 main > .page-container > .page-navigation {
   width: 100%;
   display: flex;
@@ -82,12 +89,6 @@ main > .page-container > .page-navigation > .title > a {
   border: solid transparent;
   border-width: 0 0 2px 2px;
   transform: rotate(45deg);
-}
-
-@media (max-width: 968px) {
-  main > .page-container > .page-navigation h1 {
-    font-size: .75rem;
-  }
 }
 
 main > .page-container > .page-navigation h1::first-letter {
