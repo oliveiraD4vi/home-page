@@ -13,6 +13,13 @@
   <link rel="stylesheet" href="../../../styles.css">
 </head>
 <body class="custom-scroll">
+  <div class="floating-actions">
+    <div class="language-switch">
+      <button onclick="switchLanguage('pt')">PT</button>
+      <button onclick="switchLanguage('en')">EN</button>
+    </div>
+  </div>
+
   <div class="lines">
     <div class="line"></div>
     <div class="line"></div>
@@ -24,13 +31,13 @@
       <div class="page-navigation">
         <a href="../../../index.html"></a>
   
-        <h1>Acadêmico</h1>
+        <h1 data-translate="title-academic">Acadêmico</h1>
       </div>
 
       <footer>
-        Feito com
+        <span data-translate="made">Feito com</span>
         <span class="icon">S2</span>
-        por
+        <span data-translate="by">por</span>
         <a
           href="https://github.com/oliveiraD4vi"
           target="_blank"
@@ -42,5 +49,7 @@
       </footer>
     </div>
   </main>
+
+  <script src="../../../index.js"></script>
 </body>
 </html>

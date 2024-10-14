@@ -85,6 +85,13 @@
   </style>
 </head>
 <body class="custom-scroll">
+  <div class="floating-actions">
+    <div class="language-switch">
+      <button onclick="switchLanguage('pt')">PT</button>
+      <button onclick="switchLanguage('en')">EN</button>
+    </div>
+  </div>
+
   <div class="lines">
     <div class="line"></div>
     <div class="line"></div>
@@ -98,24 +105,24 @@
       </div>
   
       <div class="box-container">
-        <a href="./src/pages/academic/academic.html" class="box a">
+        <a data-translate="box-a" href="./src/pages/academic/academic.html" class="box a">
           Acadêmico
         </a>
-        <a href="./src/pages/about/about.html" class="box b">
+        <a data-translate="box-b" href="./src/pages/about/about.html" class="box b">
           Sobre mim
         </a>
-        <a href="./src/pages/projects/projects.html" class="box c vibrate reflect">
+        <a data-translate="box-c" href="./src/pages/projects/projects.html" class="box c vibrate reflect">
           Projetos
         </a>
-        <a href="./src/pages/experience/experience.html" class="box d">
+        <a data-translate="box-d" href="./src/pages/experience/experience.html" class="box d">
           Experiência
         </a>
       </div>
   
       <footer>
-        Feito com
+        <span data-translate="made">Feito com</span>
         <span class="icon">S2</span>
-        por
+        <span data-translate="by">por</span>
         <a
           href="https://github.com/oliveiraD4vi"
           target="_blank"
@@ -127,5 +134,7 @@
       </footer>
     </div>
   </main>
+
+  <script src="index.js"></script>
 </body>
 </html>
