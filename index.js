@@ -1,7 +1,7 @@
 const translations = {
   pt: {
     "pureCookieTitle": "Aviso de uso de cookies",
-    "pureCookieDesc": "Ao utilizar este website você está automaticamente concordando com o uso de cookies.",
+    "pureCookieDesc": "Ao utilizar este website você está automaticamente concordando com o uso de cookies",
     "pureCookieButton": "Entendi",
     "ptitle-academic": "Educação | Davi Oliveira",
     "box-a": "Educação",
@@ -18,11 +18,11 @@ const translations = {
     "made": "Feito com",
     "by": "por",
     "home-presentation": `Um desenvolvedor web com experiências em Angular, React, Node, Java, e muitas outras
-                          tecnologias de desenvolvimento web.`,
+                          tecnologias de desenvolvimento web`,
   },
   en: {
     "pureCookieTitle": "Cookie usage notice",
-    "pureCookieDesc": "By using this website you are automatically agreeing to the use of cookies.",
+    "pureCookieDesc": "By using this website you are automatically agreeing to the use of cookies",
     "pureCookieButton": "Ok",
     "ptitle-academic": "Education | Davi Oliveira",
     "box-a": "Education",
@@ -39,7 +39,7 @@ const translations = {
     "made": "Made with",
     "by": "by",
     "home-presentation": `A web developer
-                          with experience in Angular, React, Node, Java, among other web development technologies.`,
+                          with experience in Angular, React, Node, Java, among other web development technologies`,
   }
 };
 

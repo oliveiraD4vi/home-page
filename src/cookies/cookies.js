@@ -1,5 +1,5 @@
 var purecookieTitle = "Aviso de uso de cookies",
-    purecookieDesc = "Ao utilizar este website você está automaticamente concordando com o uso de cookies.",
+    purecookieDesc = "Ao utilizar este website você está automaticamente concordando com o uso de cookies",
     purecookieLink = '',
     purecookieButton = "Entendi";
 
