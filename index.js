@@ -1,5 +1,8 @@
 const translations = {
   pt: {
+    "pureCookieTitle": "Aviso de uso de cookies",
+    "pureCookieDesc": "Ao utilizar este website você está automaticamente concordando com o uso de cookies.",
+    "pureCookieButton": "Entendi",
     "ptitle-academic": "Educação | Davi Oliveira",
     "box-a": "Educação",
     "title-academic": "Educação",
@@ -18,6 +21,9 @@ const translations = {
                           tecnologias de desenvolvimento web.`,
   },
   en: {
+    "pureCookieTitle": "Cookie usage notice",
+    "pureCookieDesc": "By using this website you are automatically agreeing to the use of cookies.",
+    "pureCookieButton": "Ok",
     "ptitle-academic": "Education | Davi Oliveira",
     "box-a": "Education",
     "title-academic": "Education",
@@ -83,3 +89,9 @@ function getFirstLoadLanguage() {
 }
 
 getFirstLoadLanguage();
+
+// USED TO CATCH THE COOKIE NOTICE AFTER LOADING
+// NEEDS TO IMPROVE
+setTimeout(() => {
+  getFirstLoadLanguage();
+}, 300);

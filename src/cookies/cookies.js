@@ -70,6 +70,7 @@ function cookieConsent() {
     cookieTitle.className = 'cookieTitle';
     var title = document.createElement('h1');
     title.textContent = purecookieTitle;
+    title.setAttribute("data-translate", "pureCookieTitle");
     cookieTitle.appendChild(title);
 
     // Cria a descrição do aviso
@@ -77,6 +78,7 @@ function cookieConsent() {
     cookieDesc.className = 'cookieDesc';
     var descParagraph = document.createElement('p');
     descParagraph.innerHTML = purecookieDesc + " " + purecookieLink;
+    descParagraph.setAttribute("data-translate", "pureCookieDesc");
     cookieDesc.appendChild(descParagraph);
 
     // Cria o botão de aceite
@@ -84,6 +86,7 @@ function cookieConsent() {
     cookieButton.className = 'cookieButton';
     var button = document.createElement('h6');
     button.textContent = purecookieButton;
+    button.setAttribute("data-translate", "pureCookieButton");
     button.onclick = function() {
       purecookieDismiss();
     };
