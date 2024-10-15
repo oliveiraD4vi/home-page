@@ -19,19 +19,43 @@
       gap: 1rem;
     }
 
-    @media (max-width: 968px) {
-      main > .page-container > .content {
-        flex-direction: column;
-        align-items: center;
-      }
+    main > .page-container > .content > .text {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    main > .page-container > .content > .text > .technologies {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: .25rem;
+    }
+
+    main > .page-container > .content > .text > .technologies > li {
+      padding: .25rem .75rem;
+      border-radius: 1rem;
+      background-color: rgb(231, 94, 40, 0.85);
+      color: #fafafa;
+      font-size: .85rem;
     }
 
     main > .page-container > .content > .box-container {
       display: grid;
       grid-template-columns: 50% 50%;
-      gap: .75rem;
       place-content: center;
       width: fit-content;
+    }
+
+    @media (max-width: 968px) {
+      main > .page-container > .content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      main > .page-container > .content > .box-container {
+        width: 100%;
+      }
     }
 
     main > .page-container > .content > .box-container > .box {
@@ -73,21 +97,25 @@
     main > .page-container > .content > .box-container > .box.a {
       background: rgba(216, 216, 216, 0.5);
       border: 1px solid rgba(216, 216, 216, 0.25);
+      margin: .5rem 0 0 .5rem;
     }
 
     main > .page-container > .content > .box-container > .box.b {
       background: rgba(216, 216, 216, 0.5);
       border: 1px solid rgba(216, 216, 216, 0.25);
+      margin: 0 0 .5rem .5rem;
     }
 
     main > .page-container > .content > .box-container > .box.c {
-      background: rgb(231, 94, 40, 0.65);
+      background: rgb(231, 94, 40, 0.85);
       border: 2px solid rgb(231, 94, 40, 0.25);
+      margin: 0 .5rem .5rem 0;
     }
 
     main > .page-container > .content > .box-container > .box.d {
-      background: rgb(231, 94, 40, 0.65);
+      background: rgb(231, 94, 40, 0.85);
       border: 2px solid rgb(231, 94, 40, 0.25);
+      margin: .5rem .5rem 0 0;
     }
   </style>
 </head>
@@ -105,7 +133,7 @@
 
         <div class="floating-actions">
           <div class="language-switch">
-            <button id="lang-pt" class="active" onclick="switchLanguage('pt')">PT</button>
+            <button id="lang-pt" onclick="switchLanguage('pt')">PT</button>
             <button id="lang-en" onclick="switchLanguage('en')">EN</button>
           </div>
         </div>
@@ -113,11 +141,20 @@
 
       <div class="content">
         <div class="text">
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-            type specimen book.
+          <p data-translate="home-presentation">
+            Atuando como Desenvolvedor Full Stack na Elevar Commerce e graduando em
+            Sistemas de Informação na Universidade Federal do Ceará - Campus Quixadá. Um
+            desenvolvedor web com experiências em Angular, React, Node, Java, e muitas outras
+            tecnologias de desenvolvimento web.
           </p>
+
+          <ul class="technologies">
+            <li>Angular</li>
+            <li>React</li>
+            <li>Javascript</li>
+            <li>Typescript</li>
+            <li>Java</li>
+          </ul>
         </div>
       
         <div class="box-container">

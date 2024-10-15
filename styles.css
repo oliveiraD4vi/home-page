@@ -95,6 +95,12 @@ main > .page-container > .page-navigation h1::first-letter {
   color: #e75d28;
 }
 
+@media (max-width: 968px) {
+  main > .page-container > .page-navigation h1 {
+    font-size: 1.5rem;
+  }
+}
+
 footer {
   margin-top: 1rem;
   padding: 1rem 0;

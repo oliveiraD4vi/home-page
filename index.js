@@ -13,7 +13,11 @@ const translations = {
     "box-d": "Experiência",
     "title-experience": "Experiência",
     "made": "Feito com",
-    "by": "por"
+    "by": "por",
+    "home-presentation": `Atuando como Desenvolvedor Full Stack na Elevar Commerce e graduando em
+                          Sistemas de Informação na Universidade Federal do Ceará - Campus Quixadá. Um
+                          desenvolvedor web com experiências em Angular, React, Node, Java, e muitas outras
+                          tecnologias de desenvolvimento web.`,
   },
   en: {
     "ptitle-academic": "Academic | Davi Oliveira",
@@ -29,7 +33,10 @@ const translations = {
     "box-d": "Experience",
     "title-experience": "Experience",
     "made": "Made with",
-    "by": "by"
+    "by": "by",
+    "home-presentation": `Working as a Full Stack Developer at Elevar Commerce and graduating in
+                          Information Systems at the Federal University of Ceará - Quixadá Campus. A web developer
+                          with experience in Angular, React, Node, Java, among other web development technologies.`,
   }
 };
 
