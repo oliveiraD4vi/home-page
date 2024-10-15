@@ -25,20 +25,33 @@
       gap: 1rem;
     }
 
+    main > .page-container > .content > .text > p {
+      background-color: rgba(104, 104, 104, 0.85);
+      border-radius: .5rem;
+      padding: .75rem;
+    }
+
     main > .page-container > .content > .text > .technologies {
       display: flex;
       align-items: center;
       list-style: none;
-      gap: .25rem;
+      gap: .5rem;
       flex-wrap: wrap;
     }
 
     main > .page-container > .content > .text > .technologies > li {
       padding: .25rem .75rem;
       border-radius: 1rem;
-      background-color: rgb(231, 94, 40, 0.85);
       color: #fafafa;
       font-size: .85rem;
+    }
+
+    main > .page-container > .content > .text > .technologies > li.front {
+      background-color: rgba(231, 94, 40, 0.85);
+    }
+
+    main > .page-container > .content > .text > .technologies > li.back {
+      background-color: rgba(104, 104, 104, 0.85);
     }
 
     main > .page-container > .content > .box-container {
@@ -67,7 +80,7 @@
       text-decoration: none;
       color: #fafafa;
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      border-radius: .25rem;
+      border-radius: .5rem;
       backdrop-filter: blur(5px);
       -webkit-backdrop-filter: blur(5px);
       border: 2px solid transparent;
@@ -127,7 +140,7 @@
     <div class="line"></div>
   </div>
 
-  <main>
+  <main class="custom-scroll">
     <div class="page-container">
       <div class="page-navigation">
         <h1>Davi Oliveira</h1>
@@ -143,18 +156,28 @@
       <div class="content">
         <div class="text">
           <p data-translate="home-presentation">
-            Atuando como Desenvolvedor Full Stack na Elevar Commerce e graduando em
-            Sistemas de Informação na Universidade Federal do Ceará - Campus Quixadá. Um
-            desenvolvedor web com experiências em Angular, React, Node, Java, e muitas outras
+            Um desenvolvedor web com experiências em Angular, React, Node, Java, e muitas outras
             tecnologias de desenvolvimento web.
           </p>
 
           <ul class="technologies">
-            <li>Angular</li>
-            <li>React</li>
-            <li>Javascript</li>
-            <li>Typescript</li>
-            <li>Java</li>
+            <li class="front">Angular</li>
+            <li class="front">React</li>
+            <li class="front">Javascript</li>
+            <li class="front">Typescript</li>
+            <li class="front">HTML5</li>
+            <li class="front">CSS3</li>
+            <li class="front">SCSS</li>
+            <li class="front">SSR / SSG</li>
+            <li class="back">Git</li>
+            <li class="back">Websocket</li>
+            <li class="back">Elastic Search</li>
+            <li class="back">NestJS</li>
+            <li class="back">Java</li>
+            <li class="back">SpringBoot</li>
+            <li class="back">PostgreSQL</li>
+            <li class="back">MongoDB</li>
+            <li class="back">Firebase</li>
           </ul>
         </div>
       
@@ -169,7 +192,7 @@
             Experiência
           </a>
           <a data-translate="box-a" href="./src/pages/academic/academic.html" class="box a">
-            Acadêmico
+            Educação
           </a>
         </div>
       </div>
