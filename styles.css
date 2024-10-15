@@ -85,12 +85,14 @@ main > .page-container > .page-navigation > .title {
   gap: .75rem;
 }
 
+main > .page-container > .page-navigation > .title > a > img {
+  width: 1.5rem;
+}
+
 main > .page-container > .page-navigation > .title > a {
-  padding: .4rem;
-  box-shadow: 2px -2px 0 1px #fafafa inset;
-  border: solid transparent;
-  border-width: 0 0 2px 2px;
-  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  filter: invert(100%);
 }
 
 main > .page-container > .page-navigation h1::first-letter {
